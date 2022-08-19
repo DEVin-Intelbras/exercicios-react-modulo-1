@@ -51,19 +51,6 @@ function App() {
             subSecoes={obterSubSecoes(secao)}
           />
         ))}
-        {/* <Secao
-          nome='Entradas'
-          produtos={produtos.entradas}
-          subSecoes={Array.from(subSecoesEntradas)}
-        /> */}
-
-        {/* <Secao
-          nome='Principais'
-          produtos={produtos.principais}
-          subSecoes={Array.from(subSecoesPrincipais)}
-        /> */}
-
-        {/* <Secao nome='Sobremesas' produtos={produtos.sobremesas} /> */}
       </main>
       <Footer />
     </div>
