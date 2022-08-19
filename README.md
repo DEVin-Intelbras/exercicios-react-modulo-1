@@ -7,7 +7,7 @@ Projeto React criado utilizando [Vite](https://vitejs.dev/)
 Para clonar o repositório é preciso executar o comando
 
 ```
-git clone git@github.com:DEVin-Intelbras/aula-semana-07.git
+git clone git@github.com:DEVin-Intelbras/exercicios-react-modulo-1.git
 ```
 
 Para instalar as dependencias é preciso executar o comando **npm install**:
