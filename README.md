@@ -1,4 +1,4 @@
-# Repositório contendo sugestão de resolução dos exercícios propostos da semana 07
+# Repositório contendo sugestão de resolução dos exercícios propostos do módulo 1 de React
 
 Projeto React criado utilizando [Vite](https://vitejs.dev/)
 
