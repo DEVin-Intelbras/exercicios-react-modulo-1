@@ -30,6 +30,7 @@
   color: #37b000;
   text-decoration: underline;
   text-underline-offset: 4px;
+  transition: 300ms;
 }
 
 .link:hover {

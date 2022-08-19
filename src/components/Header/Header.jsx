@@ -11,6 +11,7 @@ export const Header = () => (
     <nav>
       <ul className={styles.ul}>
         <li>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a className={styles.link} href='#'>
             Menu
           </a>
