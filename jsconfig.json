@@ -2,10 +2,10 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/assets/*": ["./src/assets"],
-      "@/components/*": ["./src/components"],
-      "@/services/*": ["./src/services"]
+      "@images": ["./assets/images/index.jsx"],
+      "@icons": ["./assets/icons/index.jsx"],
+      "@components": ["./components/index.jsx"],
+      "@services": ["./services/index.jsx"]
     }
   },
   "include": ["src"]

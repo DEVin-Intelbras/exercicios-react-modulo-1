@@ -1,5 +1,5 @@
 import { Footer, Header, Secao, FiltroSecao } from '@components';
-import produtos from '@services/produtos.json';
+import { produtos } from '@services';
 import { useState } from 'react';
 import styles from './App.module.css';
 

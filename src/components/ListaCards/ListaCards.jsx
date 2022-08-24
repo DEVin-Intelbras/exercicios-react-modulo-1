@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { Card } from '@/components';
+import { Card } from '@components';
 
 import styles from './ListaCards.module.css';
 import { useState } from 'react';
