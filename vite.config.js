@@ -11,6 +11,7 @@ export default defineConfig({
       '@images': path.resolve(__dirname, './src/assets/images/index.jsx'),
       '@icons': path.resolve(__dirname, './src/assets/icons/index.jsx'),
       '@services': path.resolve(__dirname, './src/services/index.jsx'),
+      '@contexts': path.resolve(__dirname, './src/contexts/index.js'),
     },
   },
   plugins: [react(), eslint()],

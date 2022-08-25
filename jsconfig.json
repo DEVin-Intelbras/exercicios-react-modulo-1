@@ -5,7 +5,8 @@
       "@images": ["./assets/images/index.jsx"],
       "@icons": ["./assets/icons/index.jsx"],
       "@components": ["./components/index.jsx"],
-      "@services": ["./services/index.jsx"]
+      "@services": ["./services/index.jsx"],
+      "@contexts": ["./contexts/index.js"]
     }
   },
   "include": ["src"]
