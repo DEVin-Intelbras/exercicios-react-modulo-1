@@ -4,3 +4,4 @@ export { Header } from './Header';
 export { ListaCards } from './ListaCards';
 export { Secao } from './Secao';
 export { SubSecao } from './SubSecao';
+export { FiltroSecao } from './FiltroSecao';

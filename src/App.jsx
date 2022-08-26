@@ -1,29 +1,56 @@
-import { Footer, Header, Secao } from '@components';
-import produtos from '@services/produtos.json';
+import { Footer, Header, Secao, FiltroSecao } from '@components';
+import { produtos } from '@services';
+import { useState } from 'react';
 import styles from './App.module.css';
 
 function App() {
-  const subSecoesEntradas = new Set(produtos.entradas.map((p) => p.subSecao));
-  const subSecoesPrincipais = new Set(produtos.principais.map((p) => p.subSecao));
-  console.log(subSecoesEntradas, subSecoesPrincipais);
+  const [filtro, setFiltro] = useState(null);
+
+  const secoes = Array.from(new Set(produtos.map((prod) => prod.secao)));
+
+  const obterProdutosSecao = (secao) => {
+    return produtos.filter((p) => p.secao === secao);
+  };
+
+  const obterSubSecoes = (secao) => {
+    const produtosComSubSecoes = obterProdutosSecao(secao).filter((p) => p.subSecao);
+
+    return Array.from(new Set(produtosComSubSecoes.map((p) => p.subSecao)));
+  };
+
+  const obterSecoesFiltradas = () => {
+    if (filtro) {
+      return secoes.filter((s) => s === filtro);
+    }
+    return secoes;
+  };
+
+  const handleSelecionarSecao = (secao) => {
+    if (secao === filtro) {
+      setFiltro(null);
+      return;
+    }
+    setFiltro(secao);
+  };
 
   return (
     <div className={styles.app}>
       <Header />
       <main className={styles.main}>
-        <Secao
-          nome='Entradas'
-          produtos={produtos.entradas}
-          subSecoes={Array.from(subSecoesEntradas)}
+        <FiltroSecao
+          secoes={secoes}
+          secaoSelecionada={filtro}
+          onSelecionar={handleSelecionarSecao}
         />
 
-        <Secao
-          nome='Principais'
-          produtos={produtos.principais}
-          subSecoes={Array.from(subSecoesPrincipais)}
-        />
-
-        <Secao nome='Sobremesas' produtos={produtos.sobremesas} />
+        {obterSecoesFiltradas().map((secao) => (
+          <Secao
+            key={secao}
+            nome={secao}
+            produtos={obterProdutosSecao(secao)}
+            subSecoes={obterSubSecoes(secao)}
+          />
+        ))}
       </main>
       <Footer />
     </div>

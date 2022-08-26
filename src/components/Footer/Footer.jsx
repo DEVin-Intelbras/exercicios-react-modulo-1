@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Youtube } from '@assets/icons';
+import { Facebook, Instagram, Youtube } from '@icons';
 
 import styles from './Footer.module.css';
 
