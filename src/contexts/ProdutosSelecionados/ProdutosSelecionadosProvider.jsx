@@ -7,7 +7,7 @@ export const ProdutosSelecionadosProvider = ({ children }) => {
   const [produtosSelecionados, setProdutosSelecionados] = useState([]);
 
   const isSelecionado = (id) => {
-    return produtosSelecionados.some((item) => item === id);
+    return produtosSelecionados.some((item) => item.id === id);
   };
 
   const handleSelecionar = (produto) => {
@@ -19,9 +19,13 @@ export const ProdutosSelecionadosProvider = ({ children }) => {
     setProdutosSelecionados([...produtosSelecionados, produto]);
   };
 
+  const limparProdutos = () => {
+    setProdutosSelecionados([]);
+  };
+
   return (
     <ProdutosSelecionadosContext.Provider
-      value={{ produtosSelecionados, isSelecionado, handleSelecionar }}
+      value={{ produtosSelecionados, isSelecionado, handleSelecionar, limparProdutos }}
     >
       {children}
     </ProdutosSelecionadosContext.Provider>
