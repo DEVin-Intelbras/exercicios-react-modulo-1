@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botao {
+  padding: 10px;
+  background-color: #181717;
+  border: 1px solid #37b000;
+  color: #37b000;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 300ms;
+}
+
+.botao:hover {
+  opacity: 0.7;
+}

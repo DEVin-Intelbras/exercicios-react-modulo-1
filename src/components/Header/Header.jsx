@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { logo } from '@images';
 
 import styles from './Header.module.css';
@@ -11,10 +13,15 @@ export const Header = () => (
     <nav>
       <ul className={styles.ul}>
         <li>
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a className={styles.link} href='#'>
+          <Link to='/produtos-selecionados' className={styles.link}>
+            Produtos Selecionados
+          </Link>
+        </li>
+
+        <li>
+          <Link to='/produtos' className={styles.link}>
             Menu
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
